@@ -44,7 +44,7 @@ def dw_test_case():
     # starting_node = 0  # Won't need this for now, as we can just choose the closest node to depot in custom code after?
 
     sampler_config = {
-        "sampler": "exact",  # TODO: Currently debugging. Will exact is local, while dwave uses the token args
+        "sampler": "dwave",  # TODO: Currently debugging. Will exact is local, while dwave uses the token args
         "sapi_token": os.environ["DWAVE_TOKEN"],
         "url": os.environ["DWAVE_URL"],
         "solver": os.environ["DWAVE_SOLVER"],
@@ -72,6 +72,9 @@ def dw_test_case():
         )
         print("Solution:", dwave_solution)
         print("Solution cost:", solution_cost)
+
+        print(f"Valid solution rate: {len(dwave_distribution)} of {dwave_solver._num_runs} runs = {len(dwave_distribution) / dwave_solver._num_runs * 100}%")
+        # TODO: Remove private var access
 
         # Print all costs
         print("Route, cost, (energy, occurrences)):")
