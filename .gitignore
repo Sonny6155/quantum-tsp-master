@@ -1,0 +1,9 @@
+*.pyc
+*.png
+.idea
+src/grove
+output/*
+
+# Not sure on these, fix later if needed
+.vscode
+.pytest_cache

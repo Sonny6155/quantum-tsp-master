@@ -1,0 +1,11 @@
+# Installed via conda on python 3.11.9
+dimod
+dwave-ocean-sdk
+# dwave-cloud-client
+# dwave-networkx
+# dwave-qbsolv
+# dwave-system
+networkx
+matplotlib
+quantum-grove
+pyquil
