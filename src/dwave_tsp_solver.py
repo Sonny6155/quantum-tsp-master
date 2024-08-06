@@ -296,7 +296,7 @@ class DWaveTSPSolver(object):
             TODO: Consider a more *sensible* table format...
         """
         valid_distribution = {}
-        min_energy = np.argmax(response.record.energy)
+        min_energy = np.max(response.record.energy)
         best_solution = None
         node_count = int(np.sqrt(len(response.record[0].sample)))
 
